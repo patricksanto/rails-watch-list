@@ -75,5 +75,12 @@ end
 
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
+
+# to generate faker seeds
 gem 'faker'
+
+# to protect my personal api keys
 gem "dotenv-rails", groups: [:development, :test]
+
+# to store the images of this app
+gem "cloudinary"

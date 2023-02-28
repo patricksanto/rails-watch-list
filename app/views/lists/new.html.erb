@@ -5,6 +5,7 @@
   <div class="card p-4 m-4 shadow">
     <%= simple_form_for @list do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Create List", class: "btn btn-primary" %>
     <% end %>
   </div>
