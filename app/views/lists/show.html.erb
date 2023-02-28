@@ -8,7 +8,7 @@
     <% @list.bookmarks.each do |bookmark| %>
       <div class="col-4">
         <div class="card shadow">
-          <%# <img src="<%=bookmark.movie.poster_url%>" alt=""> %>
+
           <%= cl_image_tag bookmark.movie.photo.key, height: 300, width: 400, crop: :fill %>
           <h3><%= bookmark.movie.title %></h3>
           <p><%= bookmark.comment %></p>
