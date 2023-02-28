@@ -4,13 +4,15 @@
 
 
 <div class="container text-center">
-  <div class="row gap-3">
+  <div class="row ">
     <% @list.bookmarks.each do |bookmark| %>
-      <div class="card col-4 p-3 shadow">
-        <img src="<%=bookmark.movie.poster_url%>" alt="">
-        <h3><%= bookmark.movie.title %></h3>
-        <p><%= bookmark.comment %></p>
-        <%= link_to "Delete this bookmark", bookmark_path(bookmark.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-dark' %>
+      <div class="col-4">
+        <div class="card shadow">
+          <img src="<%=bookmark.movie.poster_url%>" alt="">
+          <h3><%= bookmark.movie.title %></h3>
+          <p><%= bookmark.comment %></p>
+          <%= link_to "Delete this bookmark", bookmark_path(bookmark.id), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-dark' %>
+        </div>
       </div>
     <% end %>
   </div>
