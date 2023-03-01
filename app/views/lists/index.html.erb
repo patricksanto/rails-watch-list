@@ -11,3 +11,13 @@
 
   <%= link_to 'Create a list', new_list_path, class: 'btn btn-primary m-4' %>
 </div>
+
+
+<div class="container-lists">
+  <% @lists.each do |list| %>
+    <div class="card-list" style="background-image: url(<%= cl_image_path list.photo.key,  height: 800, crop: :fill %>);">
+      <img src="<%=cl_image_path list.photo.key %>" alt="">
+      <h3 class="list-title"><%= list.name %></h3>
+    </div>
+  <% end %>
+</div>
